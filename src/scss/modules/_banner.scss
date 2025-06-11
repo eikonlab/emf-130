@@ -1,0 +1,225 @@
+.banner-bg-cont {
+  --circle-size: 20vw;
+  --blending: hard-light;
+
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  background: $light;
+  top: 0;
+  left: 0;
+
+  svg {
+    display: none;
+  }
+
+  .gradient-blur {
+    filter: blur(20px);
+  }
+
+  .gradients-container {
+    filter: url(#goo);
+    width: 100%;
+    height: 100%;
+  }
+
+  .g {
+    position: absolute;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    opacity: 1;
+    mix-blend-mode: var(--blending);
+  }
+
+  .g1 {
+    background: linear-gradient(
+      90deg,
+      rgba(102, 235, 250, 1) 0%,
+      rgba(204, 16, 113, 1) 100%
+    );
+
+    width: 20vw;
+
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
+  }
+
+  .g2 {
+    background: linear-gradient(
+      90deg,
+      rgba(250, 109, 102, 1) 0%,
+      rgba(255, 251, 0, 1) 100%
+    );
+
+    width: 10vw;
+
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2 + 30vw);
+
+    transform-origin: calc(50% - 100px);
+    animation: moveInCircle 20s reverse infinite;
+  }
+
+  .g3 {
+    background: linear-gradient(
+      90deg,
+      rgba(245, 199, 255, 1) 0%,
+      rgba(145, 242, 237, 1) 100%
+    );
+
+    width: 15vw;
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+  }
+
+  .g4 {
+    background: linear-gradient(
+      90deg,
+      rgba(247, 255, 13, 1) 0%,
+      rgba(255, 0, 0, 1) 100%
+    );
+
+    width: 25vw;
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: calc(50% + 200px);
+    animation: moveHorizontal 40s ease infinite;
+
+    opacity: 0.7;
+  }
+
+  .g5 {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 199, 246, 1) 0%,
+      rgba(232, 83, 237, 1) 48%,
+      rgba(106, 6, 143, 0.3) 100%
+    );
+    width: 20vw;
+
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+
+    transform-origin: calc(50% - 100px) calc(50% + 50px);
+    animation: moveInCircle 20s ease infinite;
+
+    opacity: 0.7;
+  }
+
+  .interactive {
+    background: linear-gradient(
+      90deg,
+      rgba(130, 13, 255, 1) 0%,
+      rgba(255, 0, 174, 1) 100%
+    );
+    width: 8vw;
+    height: 8vw;
+
+    top: -4vw;
+    left: -4vw;
+    transform-origin: center center;
+    opacity: 0.7;
+  }
+}
+
+.banner-text-container {
+  position: fixed;
+  width: 100vw;
+  height: 100lvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banner-titles {
+  margin-bottom: 2vh;
+}
+
+.banner-title {
+  font-size: 82px;
+  font-weight: 500;
+  line-height: 69px; /* 84.146% */
+  text-transform: uppercase;
+}
+
+.banner-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px; /* 133.333% */
+  text-transform: uppercase;
+}
+
+.banner-dates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10vh;
+
+  .banner-date {
+    writing-mode: sideways-lr;
+
+    font-size: 26px;
+    font-weight: 300;
+  }
+
+  .banner-dates-line {
+    width: 1px;
+    height: 20px;
+    background-color: $dark;
+    opacity: 0.5;
+  }
+}
+
+@include bp("md") {
+  .banner-title {
+    font-size: 13vw;
+    line-height: 11vw; /* 90% */
+    margin-bottom: 2vh;
+  }
+
+  .banner-subtitle {
+    font-size: 4vw;
+    line-height: 4.5vw; /* 123.333% */
+  }
+
+  .banner-dates {
+    height: 100%;
+    margin-bottom: 0;
+    padding-bottom: 2vh;
+    justify-content: flex-end;
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}

@@ -7,7 +7,93 @@
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
-    <h1>Hello world</h1>
+    <header class="header-cont">
+      <nav class="header-nav">
+        <a href="" class="header-logo">
+          <img src="img/EMF_logo.png?as=webp" alt="Logo de l'EMF" />
+        </a>
+        <div class="header-burger-icon" aria-label="Open burger menu">
+          <span></span><span></span>
+        </div>
+        <ul class="header-burger-links">
+          <li class="header-burger-link">
+            <a href="#about">À propos</a>
+          </li>
+          <li class="header-burger-link">
+            <a href="#interview">Interview</a>
+          </li>
+          <li class="header-burger-link">
+            <a href="#events">Événements</a>
+          </li>
+          <li class="header-burger-link">
+            <a href="#livres">Livres</a>
+          </li>
+          <li class="header-burger-link">
+            <a href="#histoire">Histoire</a>
+          </li>
+          <li class="header-burger-link">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="banner">
+        <div class="banner-text-container">
+          <div class="container">
+            <div class="row">
+              <div class="col-1 offset-11 order-md-1 offset-md-3">
+                <div class="banner-dates">
+                  <p class="banner-date">13.05.2026</p>
+                  <div class="banner-dates-line"></div>
+                  <p class="banner-date">14.01</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-8">
+                <div class="banner-titles">
+                  <h1 class="banner-title">130 ans de l'EMF</h1>
+                  <p class="banner-subtitle">
+                    130 ans de transmission,<br />
+                    tous en fête en 2026
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-bg-cont">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="100"
+                  result="blur"
+                />
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                  result="goo"
+                />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+          <div class="gradient-blur">
+            <div class="gradients-container">
+              <div class="g g5"></div>
+              <div class="g g1"></div>
+              <div class="g g2"></div>
+              <div class="g g3"></div>
+              <div class="g g4"></div>
+              <div class="g interactive"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="js/main.js" type="module"></script>
   </body>
