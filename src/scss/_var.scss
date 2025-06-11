@@ -1,0 +1,30 @@
+$dark: #0f0e0e;
+$light: #ffffff;
+$yellow: #f5cc13;
+$red: #fd2e08;
+$purple: #d351e2;
+$blue: #baeff3;
+
+@mixin bp($size) {
+  @if $size == "xs" {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $size == "sm" {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $size == "md" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == "lg" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $size == "xl" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

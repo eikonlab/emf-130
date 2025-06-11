@@ -38,5 +38,9 @@
     "posthtml-inline-svg": "^0.2.0",
     "rimraf": "^6.0.1",
     "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.6",
+    "gsap": "^3.13.0"
   }
 }
