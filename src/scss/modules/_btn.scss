@@ -1,0 +1,76 @@
+:root {
+  --random-color: red;
+}
+
+.btn {
+  padding: 10px 24px 14px;
+  border-radius: 40px;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.outline {
+  border: 1px solid $light;
+
+  position: relative;
+  span {
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    transform: translatey(200%);
+    color: $dark;
+    z-index: 1;
+    transition-duration: none;
+    transition-delay: 0.1s;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 0;
+    background: var(--random-color, yellow);
+    transition: 0.3s 0.15s, background 0.5s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 0;
+    background: $light;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    span {
+      transform: translatey(0);
+      transition: 0.3s 0.2s;
+    }
+
+    &::before {
+      bottom: 0;
+      top: auto;
+      height: 100%;
+      transition: 0.3s, background 0.5s;
+    }
+    &::after {
+      bottom: 0;
+      top: auto;
+      height: 100%;
+      transition: 0.3s 0.2s;
+    }
+  }
+}
+
+@include bp("md") {
+  .btn {
+    font-size: 24px;
+    padding: 12px 24px;
+  }
+}

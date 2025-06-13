@@ -31,17 +31,89 @@ document.addEventListener("DOMContentLoaded", () => {
     // Burger menu
     const burger = document.querySelector(".header-burger-icon");
     const menu = document.querySelector(".header-burger-links");
+    const bg = document.querySelector(".background");
 
     burger.addEventListener("click", () => {
       burger.classList.toggle("active");
       menu.classList.toggle("active");
+      bg.classList.toggle("active");
     });
 
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
         burger.classList.remove("active");
         menu.classList.remove("active");
+        bg.classList.remove("active");
       }
     });
+  }
+
+  {
+    // carrousel
+    const carrousel = document.querySelector(".carrousel");
+    const items = document.querySelectorAll(".carrousel-item");
+
+    function getItemWidthIncludingMargin() {
+      const style = getComputedStyle(items[0]);
+      const margin =
+        parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+      return items[0].offsetWidth + margin;
+    }
+
+    function isAtEnd() {
+      return (
+        Math.ceil(carrousel.scrollLeft + carrousel.offsetWidth) >=
+        carrousel.scrollWidth
+      );
+    }
+
+    function isAtStart() {
+      return carrousel.scrollLeft <= 0;
+    }
+
+    // NEXT (right)
+    document.querySelector(".next").addEventListener("click", () => {
+      const scrollAmount = getItemWidthIncludingMargin();
+      if (isAtEnd()) {
+        carrousel.scrollTo({ left: 0, behavior: "smooth" }); // Go to start
+      } else {
+        carrousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    });
+
+    // PREV (left)
+    document.querySelector(".prev").addEventListener("click", () => {
+      const scrollAmount = getItemWidthIncludingMargin();
+      if (isAtStart()) {
+        carrousel.scrollTo({ left: carrousel.scrollWidth, behavior: "smooth" }); // Go to end
+      } else {
+        carrousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      }
+    });
+  }
+
+  {
+    // Random Color
+    const colors = ["#BAEFF3", "#D351E2", "#F5CC13", "#FD2E08"];
+
+    function applyRandomColorOnHover(elements, property) {
+      elements.forEach((element) => {
+        let previousColor = null;
+
+        element.addEventListener("mouseenter", function () {
+          let randomColor;
+
+          do {
+            randomColor = colors[Math.floor(Math.random() * colors.length)];
+          } while (randomColor === previousColor);
+
+          previousColor = randomColor;
+          element.style.setProperty(property, randomColor);
+        });
+      });
+    }
+
+    const buttonElements = document.querySelectorAll(".btn");
+    applyRandomColorOnHover(buttonElements, "--random-color");
   }
 });

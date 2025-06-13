@@ -1,0 +1,76 @@
+.books-cont {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  position: relative;
+  z-index: 2;
+  padding: 40px 24px;
+  overflow: hidden;
+  gap: 16px;
+  color: $light;
+  align-items: flex-start;
+
+  &.second {
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+    .books-bg::before {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 60%,
+        rgba(0, 0, 0, 0.4) 100%
+      );
+    }
+  }
+}
+
+.books-title {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.books-description {
+}
+
+.books-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+@include bp("md") {
+  .books-cont {
+    padding: 60px 65px;
+    height: 90vh;
+    gap: 24px;
+  }
+
+  .books-bg {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

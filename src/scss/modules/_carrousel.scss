@@ -1,0 +1,83 @@
+.carrousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.carrousel-control {
+  border: 1px solid black;
+  background: $dark;
+  padding: 16px 20px;
+  position: relative;
+  cursor: pointer;
+
+  &.prev {
+    transform: rotate(180deg);
+  }
+
+  img {
+    color: white;
+    mix-blend-mode: difference;
+    z-index: 1;
+    position: relative;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.4s;
+    background: $light;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.4s;
+    background: var(--random-color, yellow);
+  }
+
+  &:hover {
+    &::before {
+      width: 0;
+      transition: 0.4s 0.2s;
+    }
+
+    &::after {
+      width: 0;
+    }
+  }
+}
+
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  padding: 5vh 0;
+  overflow-x: hidden;
+  transition: all 0.5s;
+}
+
+.carrousel-item {
+  position: relative;
+  transition: all 0.5s;
+
+  video {
+    max-height: 80vh;
+    max-width: 100vw;
+    aspect-ratio: 3/4;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba($dark, 0.1);
+  }
+}

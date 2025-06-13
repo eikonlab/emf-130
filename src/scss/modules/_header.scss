@@ -8,10 +8,10 @@
   padding: 3vh 4vw;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(255, 255, 255, 0.838) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(1.5px);
 }
 
 .header-logo {
@@ -22,8 +22,9 @@
 }
 
 .header-burger-icon {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   display: flex;
   gap: 5px;
   flex-direction: column;
@@ -61,8 +62,8 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  padding: 20vh 4vw 5vh;
+  gap: 15px;
+  padding: 20vh 6vw 5vh 15vw;
   transition: 0.3s ease-in-out;
 
   &.active {
@@ -71,7 +72,7 @@
 }
 
 .header-burger-link a {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
   text-decoration: none;
 }
