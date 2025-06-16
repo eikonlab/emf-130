@@ -1,4 +1,5 @@
 @import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/utilities";
 
 @import "font";
 @import "var";
@@ -11,3 +12,8 @@
 @import "modules/books";
 @import "modules/carrousel";
 @import "modules/event";
+@import "modules/sponsor";
+@import "modules/presse";
+@import "modules/emf";
+@import "modules/slider";
+@import "modules/footer";

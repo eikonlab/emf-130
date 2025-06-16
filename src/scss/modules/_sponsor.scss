@@ -1,0 +1,55 @@
+.sponsor-cont {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 40px 10px;
+  row-gap: 60px;
+}
+
+.sponsor {
+  width: 45%;
+  transition: scale 0.3s;
+
+  &:hover {
+    scale: 1.05;
+  }
+
+  &:nth-child(1) {
+    width: 90%;
+  }
+  &:nth-child(4) {
+    width: 70%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@include bp("md") {
+  .sponsor-cont {
+    margin: 80px 40px;
+  }
+  .sponsor {
+    width: 15%;
+
+    &:hover {
+      scale: 1.05;
+    }
+
+    &:nth-child(1) {
+      width: 25%;
+    }
+    &:nth-child(4) {
+      width: 22%;
+    }
+    &:nth-child(3) {
+      order: 1;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

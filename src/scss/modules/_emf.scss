@@ -1,0 +1,31 @@
+.emf-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+  }
+}
+
+.emf-texts {
+  padding: 5vh 0 2vh 2vw;
+}
+
+.emf-btn-cont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 50px 0 0;
+  row-gap: 20px;
+}
+
+@include bp("md") {
+  .emf-img {
+    margin-right: 2vw;
+  }
+}

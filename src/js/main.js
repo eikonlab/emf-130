@@ -1,3 +1,7 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 document.addEventListener("DOMContentLoaded", () => {
   {
     // bubble interactive
@@ -115,5 +119,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const buttonElements = document.querySelectorAll(".btn");
     applyRandomColorOnHover(buttonElements, "--random-color");
+    applyRandomColorOnHover(
+      document.querySelectorAll("footer a"),
+      "--random-color"
+    );
+    applyRandomColorOnHover(
+      document.querySelectorAll(".presse"),
+      "--random-color"
+    );
+  }
+
+  {
+    //hide banner / show footer on scroll
+    const banner = document.querySelector(".banner-text-container");
+    const footer = document.querySelector("footer");
+
+    ScrollTrigger.create({
+      trigger: "#books",
+      start: "top top",
+      onEnter: () => {
+        gsap.set(banner, { display: "none" });
+        gsap.set(footer, { display: "block" });
+      },
+      onLeaveBack: () => {
+        gsap.set(banner, { display: "flex" });
+        gsap.set(footer, { display: "none" });
+      },
+    });
   }
 });

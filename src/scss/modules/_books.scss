@@ -1,7 +1,6 @@
 .books-cont {
   display: flex;
   flex-direction: column;
-  height: 80vh;
   position: relative;
   z-index: 2;
   padding: 40px 24px;
@@ -14,6 +13,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     text-align: right;
+    margin-bottom: 120px;
 
     .books-bg::before {
       background: linear-gradient(
@@ -31,9 +31,6 @@
   font-weight: 500;
 }
 
-.books-description {
-}
-
 .books-bg {
   position: absolute;
   inset: 0;
@@ -43,6 +40,8 @@
     position: absolute;
     inset: 0;
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   &::before {

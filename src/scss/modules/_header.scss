@@ -4,8 +4,8 @@
   z-index: 5;
   width: 100vw;
   justify-content: space-between;
-  align-items: center;
-  padding: 3vh 4vw;
+  align-items: flex-end;
+  padding: 2vh 4vw;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.838) 0%,
@@ -58,7 +58,7 @@
   height: 100vh;
   list-style: none;
   text-align: right;
-
+  align-items: flex-end;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -85,6 +85,7 @@
     position: static;
     height: auto;
     flex-direction: row;
+    align-items: baseline;
     gap: 35px;
     padding: 0;
     background: transparent;

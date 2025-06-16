@@ -22,11 +22,13 @@ html {
 }
 
 .spacer {
-  height: 100lvh;
+  height: 100svh;
+  pointer-events: none;
 }
 
 .background {
   position: fixed;
+  z-index: 3;
   inset: 0;
   background: rgba($dark, 0.1);
   backdrop-filter: blur(2px);
@@ -41,6 +43,8 @@ html {
 
 .white-bg {
   background: $light;
+  position: relative;
+  z-index: 1;
 }
 
 h2 {
@@ -57,8 +61,12 @@ h2 {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 h3 {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 500;
   line-height: 40px;
   margin-bottom: 25px;
