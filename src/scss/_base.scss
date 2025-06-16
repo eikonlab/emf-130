@@ -26,6 +26,11 @@ html {
   pointer-events: none;
 }
 
+*::selection {
+  background: $dark;
+  color: $light;
+}
+
 .background {
   position: fixed;
   z-index: 3;

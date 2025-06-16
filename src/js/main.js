@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let tgX = 0;
     let tgY = 0;
 
-    function move() {
+    function move(followElem) {
       curX += (tgX - curX) / 20;
       curY += (tgY - curY) / 20;
-      interBubble.style.transform = `translate(${Math.round(
+      followElem.style.transform = `translate(${Math.round(
         curX
       )}px, ${Math.round(curY)}px)`;
       requestAnimationFrame(() => {
-        move();
+        move(followElem);
       });
     }
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tgY = event.clientY;
     });
 
-    move();
+    move(interBubble);
   }
 
   {
@@ -94,6 +94,15 @@ document.addEventListener("DOMContentLoaded", () => {
         carrousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
       }
     });
+
+    carrousel.addEventListener("mouseenter", () => {
+      carrousel.addEventListener("mousemove", (event) => {
+        const rect = carrousel.getBoundingClientRect();
+        tgX = event.clientX - rect.left;
+        tgY = event.clientY - rect.top;
+      });
+      move(document.querySelector(".carrousel-cta"));
+    });
   }
 
   {
@@ -127,6 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".presse"),
       "--random-color"
     );
+    applyRandomColorOnHover(
+      document.querySelectorAll(".header-burger-link a"),
+      "--random-color"
+    );
   }
 
   {
@@ -145,6 +158,19 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.set(banner, { display: "flex" });
         gsap.set(footer, { display: "none" });
       },
+    });
+  }
+
+  {
+    const carrouselVids = document.querySelectorAll(".carrousel-item video");
+
+    carrouselVids.forEach((video) => {
+      video.addEventListener("mouseenter", () => {
+        video.setAttribute("controls", "");
+      });
+      video.addEventListener("mouseleave", () => {
+        video.removeAttribute("controls", "");
+      });
     });
   }
 });

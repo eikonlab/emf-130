@@ -75,6 +75,44 @@
   font-size: 24px;
   font-weight: 300;
   text-decoration: none;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s;
+    background: $dark;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.4s 0.1s ease-in-out;
+    background: var(--random-color, yellow);
+  }
+
+  &:hover {
+    &::before {
+      right: unset;
+      left: 0;
+      width: 100%;
+      transition: width 0.4s;
+    }
+
+    &::after {
+      transition: width 0.4s 0.2s;
+      right: unset;
+      left: 0;
+      width: 100%;
+    }
+  }
 }
 
 @include bp("md") {
