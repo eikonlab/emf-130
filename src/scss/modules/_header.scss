@@ -15,9 +15,13 @@
 }
 
 .header-logo {
+  transition: 0.3s;
   img {
     width: 4vw;
     min-width: 60px;
+  }
+  &:hover {
+    scale: 1.05;
   }
 }
 

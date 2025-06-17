@@ -1,5 +1,5 @@
 .banner-bg-cont {
-  --circle-size: 20vw;
+  --circle-size: 60vw;
   --blending: hard-light;
 
   width: 100vw;
@@ -16,7 +16,7 @@
   }
 
   .gradient-blur {
-    filter: blur(20px);
+    filter: blur(18px);
     width: 100%;
     height: 100%;
   }
@@ -36,16 +36,12 @@
   }
 
   .g1 {
-    background: linear-gradient(
-      90deg,
-      rgba(102, 235, 250, 1) 0%,
-      rgba(204, 16, 113, 1) 100%
-    );
+    background: linear-gradient(90deg, rgba($red, 1) 0%, rgba($yellow, 1) 100%);
+    --circle-size: 20vw;
+    width: var(--circle-size);
 
-    width: 20vw;
-
-    top: 70%;
-    left: calc(50% - var(--circle-size) / 2);
+    top: 60%;
+    left: 60%;
 
     transform-origin: center center;
     animation: moveVertical 30s ease infinite;
@@ -54,42 +50,38 @@
   .g2 {
     background: linear-gradient(
       90deg,
-      rgba(250, 109, 102, 1) 0%,
-      rgba(255, 251, 0, 1) 100%
+      rgba($blue, 1) 0%,
+      rgba($purple, 1) 100%
     );
+    --circle-size: 10vw;
+    width: var(--circle-size);
 
-    width: 10vw;
+    top: 30%;
+    left: 75%;
 
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2 + 30vw);
-
-    transform-origin: calc(50% - 100px);
-    animation: moveInCircle 20s reverse infinite;
+    transform-origin: calc(50% - 200px);
+    animation: moveInCircle 50s linear reverse infinite;
   }
 
   .g3 {
     background: linear-gradient(
       90deg,
-      rgba(245, 199, 255, 1) 0%,
-      rgba(145, 242, 237, 1) 100%
+      rgba($purple, 1) 0%,
+      rgba($blue, 1) 100%
     );
-
-    width: 15vw;
+    --circle-size: 15vw;
+    width: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2 + 200px);
     left: calc(50% - var(--circle-size) / 2 - 500px);
 
-    transform-origin: calc(50% + 400px);
-    animation: moveInCircle 40s linear infinite;
+    transform-origin: calc(50% + 200px);
+    animation: moveInCircle 60s linear infinite;
   }
 
   .g4 {
-    background: linear-gradient(
-      90deg,
-      rgba(247, 255, 13, 1) 0%,
-      rgba(255, 0, 0, 1) 100%
-    );
-
-    width: 25vw;
+    --circle-size: 25vw;
+    background: linear-gradient(90deg, rgba($red, 1) 0%, rgba($purple, 1) 100%);
+    width: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
 
@@ -100,29 +92,26 @@
   }
 
   .g5 {
+    --circle-size: 20vw;
+
     background: linear-gradient(
       90deg,
-      rgba(255, 199, 246, 1) 0%,
-      rgba(232, 83, 237, 1) 48%,
-      rgba(106, 6, 143, 0.3) 100%
+      rgba($yellow, 1) 0%,
+      rgba($blue, 1) 100%
     );
-    width: 20vw;
+    width: var(--circle-size);
 
-    top: calc(50% - var(--circle-size));
-    left: calc(50% - var(--circle-size));
+    top: 20%;
+    left: 55%;
 
     transform-origin: calc(50% - 100px) calc(50% + 50px);
-    animation: moveInCircle 20s ease infinite;
+    animation: moveInCircle 30s linear infinite;
 
     opacity: 0.7;
   }
 
   .interactive {
-    background: linear-gradient(
-      90deg,
-      rgba(130, 13, 255, 1) 0%,
-      rgba(255, 0, 174, 1) 100%
-    );
+    background: linear-gradient(90deg, rgba($purple, 1) 0%, rgba($red, 1) 100%);
     width: 8vw;
     height: 8vw;
 
@@ -187,6 +176,10 @@
 }
 
 @include bp("md") {
+  .banner-bg-cont {
+    --circle-size: 20vw;
+  }
+
   .banner-text-container {
     flex-direction: row;
     justify-content: space-between;
@@ -231,6 +224,18 @@
       height: 20px;
       order: 1;
     }
+  }
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

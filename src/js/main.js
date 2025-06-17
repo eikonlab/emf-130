@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   {
     // Random Color
-    const colors = ["#BAEFF3", "#D351E2", "#F5CC13", "#FD2E08"];
+    const colors = ["#66ebfa", "#D351E2", "#F5CC13", "#FD2E08"];
 
     function applyRandomColorOnHover(elements, property) {
       elements.forEach((element) => {
@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   {
+    // add controls on hover
     const carrouselVids = document.querySelectorAll(".carrousel-item video");
 
     carrouselVids.forEach((video) => {
@@ -171,6 +172,22 @@ document.addEventListener("DOMContentLoaded", () => {
       video.addEventListener("mouseleave", () => {
         video.removeAttribute("controls", "");
       });
+    });
+  }
+
+  {
+    // second screen anim scrolltrigger
+    const screen = document.querySelector(".white-bg");
+
+    gsap.from(screen, {
+      scale: 0.9,
+      scrollTrigger: {
+        trigger: screen,
+        top: "top bottom",
+        end: "top 30%",
+        markers: false,
+        scrub: true,
+      },
     });
   }
 });
