@@ -177,17 +177,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
   {
     // second screen anim scrolltrigger
-    const screen = document.querySelector(".white-bg");
 
-    gsap.from(screen, {
-      scale: 0.9,
-      scrollTrigger: {
-        trigger: screen,
-        top: "top bottom",
-        end: "top 30%",
-        markers: false,
-        scrub: true,
-      },
+    if (window.innerWidth > 768) {
+      const screen = document.querySelector(".white-bg");
+
+      gsap.from(screen, {
+        scale: 0.9,
+        scrollTrigger: {
+          trigger: screen,
+          top: "top bottom",
+          end: "top 30%",
+          markers: false,
+          scrub: true,
+        },
+      });
+    }
+  }
+
+  {
+    // popup
+    const thumbs = document.querySelectorAll(".event-thumb");
+    const popups = document.querySelectorAll(".event-detail-cont");
+
+    thumbs.forEach((thumb) => {
+      const value = thumb.dataset.value;
+
+      thumb.addEventListener("click", () => {
+        // Close any open popups first
+        popups.forEach((popup) => popup.classList.remove("open"));
+
+        const isMobile = thumb.classList.contains("mobile");
+        const isDesktop = thumb.classList.contains("desktop");
+
+        popups.forEach((popup) => {
+          if (
+            popup.classList.contains(value) &&
+            ((isMobile && popup.classList.contains("mobile")) ||
+              (isDesktop && popup.classList.contains("desktop")))
+          ) {
+            popup.classList.add("open");
+
+            const closeBtn = popup.querySelector(".event-detail-cross-cont");
+            if (closeBtn) {
+              closeBtn.addEventListener("click", (e) => {
+                e.stopPropagation(); // prevent bubbling
+                popup.classList.remove("open");
+              });
+            }
+          }
+        });
+      });
     });
   }
 });
