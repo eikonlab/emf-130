@@ -5,6 +5,10 @@
   margin-bottom: 100px;
 }
 
+.carrousel-descr {
+  margin-bottom: 35px;
+}
+
 .carrousel-control {
   border: 1px solid black;
   background: $dark;
@@ -70,8 +74,6 @@
   transition: all 0.5s;
 
   video {
-    filter: contrast(1);
-
     transition: 0.3s;
     max-height: 80vh;
     object-fit: cover;

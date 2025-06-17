@@ -14,14 +14,26 @@
 }
 
 .outline {
-  border: 1px solid $light;
+  border: 1px solid $dark;
+
+  &.light {
+    border: 1px solid $light;
+
+    span {
+      color: $dark;
+    }
+
+    &::after {
+      background: $light;
+    }
+  }
 
   span {
     position: absolute;
     top: 12px;
     left: 24px;
     transform: translatey(200%);
-    color: $dark;
+    color: $light;
     z-index: 1;
     transition-duration: none;
     transition-delay: 0.1s;
@@ -44,7 +56,7 @@
     width: 100%;
     left: 0;
     height: 0;
-    background: $light;
+    background: $dark;
     transition: 0.2s;
   }
 
@@ -166,7 +178,7 @@
 .outline.lang {
   border-color: $dark;
   font-size: 20px;
-  padding: 8px 12px 6px;
+  padding: 8px 12px;
 
   span {
     top: 8px;

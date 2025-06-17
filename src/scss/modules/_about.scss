@@ -1,3 +1,20 @@
 .about-cont {
   padding: 10vh 0;
 }
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  video {
+    width: 100%;
+  }
+}

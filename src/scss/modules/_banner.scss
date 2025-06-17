@@ -37,8 +37,8 @@
 
   .g1 {
     background: linear-gradient(90deg, rgba($red, 1) 0%, rgba($yellow, 1) 100%);
-    --circle-size: 20vw;
-    width: var(--circle-size);
+
+    width: 20vw;
 
     top: 60%;
     left: 60%;
@@ -53,8 +53,8 @@
       rgba($blue, 1) 0%,
       rgba($purple, 1) 100%
     );
-    --circle-size: 10vw;
-    width: var(--circle-size);
+
+    width: 10vw;
 
     top: 30%;
     left: 75%;
@@ -70,7 +70,7 @@
       rgba($blue, 1) 100%
     );
     --circle-size: 15vw;
-    width: var(--circle-size);
+    width: 15vw;
     top: calc(50% - var(--circle-size) / 2 + 200px);
     left: calc(50% - var(--circle-size) / 2 - 500px);
 
@@ -81,7 +81,7 @@
   .g4 {
     --circle-size: 25vw;
     background: linear-gradient(90deg, rgba($red, 1) 0%, rgba($purple, 1) 100%);
-    width: var(--circle-size);
+    width: 25vw;
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
 
@@ -99,7 +99,7 @@
       rgba($yellow, 1) 0%,
       rgba($blue, 1) 100%
     );
-    width: var(--circle-size);
+    width: 20vw;
 
     top: 20%;
     left: 55%;
@@ -176,8 +176,28 @@
 }
 
 @include bp("md") {
-  .banner-bg-cont {
-    --circle-size: 20vw;
+  .g1 {
+    width: 20vw;
+  }
+  .g2 {
+    width: 10vw;
+  }
+
+  .g3 {
+    width: 15vw;
+  }
+
+  .g4 {
+    width: 25vw;
+  }
+
+  .g5 {
+    width: 20vw;
+  }
+
+  .interactive {
+    width: 8vw;
+    height: 8vw;
   }
 
   .banner-text-container {

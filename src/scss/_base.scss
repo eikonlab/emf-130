@@ -106,3 +106,10 @@ p {
     line-height: 1.7vw;
   }
 }
+
+@include bp("xl") {
+  h2 {
+    font-size: 90px;
+    line-height: 95px;
+  }
+}

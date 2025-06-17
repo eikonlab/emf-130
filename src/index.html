@@ -5,6 +5,14 @@
     <title>EMF 130 ans</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
+    <link rel="icon" href="img/icon.png" />
+    <meta property="og:title" content="130 ans de l'EMF" />
+    <meta
+      property="og:description"
+      content="130 ans de transmission,
+tous en fête en 2026"
+    />
+    <meta property="og:image" content="img/opengraph-img.webp" />
   </head>
   <body>
     <header class="header-cont">
@@ -26,15 +34,16 @@
             <a href="#events">Événements</a>
           </li>
           <li class="header-burger-link">
-            <a href="#livres">Livres</a>
+            <a href="#books">Livres</a>
           </li>
           <li class="header-burger-link">
-            <a href="#histoire">Histoire</a>
+            <!-- @TODO - add link -->
+            <a href="">Histoire</a>
           </li>
           <li class="header-burger-link">
             <a href="#contact">Contact</a>
           </li>
-          <a href="" class="btn outline lang"
+          <a href="index-de.html" class="btn outline lang"
             ><b>FR</b>/DE<span><b>FR</b>/DE</span></a
           >
         </ul>
@@ -97,28 +106,36 @@
               <div class="col-12 col-md-6">
                 <h2 class="h2-small">À propos</h2>
                 <h3>Les 130 ans fêtent la transmission</h3>
-                <p>
-                  130 ans, ça se fête avec joie, curiosité et un brin d’audace !
-                  <br />
-                  <br />
-                  De janvier à juin 2026, l’École des Métiers vous invite à un
-                  voyage à travers ses savoirs : inauguration festive le 14
-                  janvier, machine façon Tinguely représentant nos métiers et
-                  réalisée par nos apprentis, musée de l’EMF, affiches d’époque,
-                  interview d’élèves et d’enseignants sur la transmission, la
-                  pédagogie, exposition d'artistes contemporains sur la mission
-                  de l'artiste de F.Hodler, conférences inspirantes et… un
-                  festival avec Phanee de Pool le 13 mai 2026 ! <br />
-                  <br />
-                  Depuis 130 ans, nous formons bien plus que des métiers !
-                  <br />
-                  <br />
-                  Venez découvrir, vibrer, partager autour de la notion de
-                  transmission.
-                </p>
+                <div class="about-text">
+                  <p>
+                    130 ans, ça se fête avec joie, curiosité et un brin d’audace
+                    !
+                  </p>
+                  <p>
+                    De janvier à juin 2026, l’École des Métiers vous invite à un
+                    voyage à travers ses savoirs : inauguration festive le 14
+                    janvier, machine façon Tinguely représentant nos métiers et
+                    réalisée par nos apprentis, musée de l’EMF, affiches
+                    d’époque, interview d’élèves et d’enseignants sur la
+                    transmission, la pédagogie, exposition d'artistes
+                    contemporains sur la mission de l'artiste de F.Hodler,
+                    conférences inspirantes et… un festival avec Phanee de Pool
+                    le 13 mai 2026 !
+                  </p>
+                  <p>
+                    Depuis 130 ans, nous formons bien plus que des métiers !
+                  </p>
+                  <p>
+                    Venez découvrir, vibrer, partager autour de la notion de
+                    transmission.
+                  </p>
+                </div>
               </div>
               <div class="col-12 col-md-6">
-                <video class="about-video" src="img/about-video.png"></video>
+                <div class="about-video">
+                  <!-- @TODO: ajouter bonne video -->
+                  <video src="img/placeholder-1.MOV" controls></video>
+                </div>
               </div>
             </div>
           </div>
@@ -134,7 +151,8 @@
               <div
                 class="col-12 col-md-5 d-flex flex-column justify-content-end"
               >
-                <p>
+                <p class="carrousel-descr">
+                  <!-- @TODO: changer texte -->
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -147,19 +165,19 @@
           <div class="carrousel-cont">
             <div class="carrousel">
               <div class="carrousel-item">
-                <video src="img/IMG_0270.MOV"></video>
+                <video src="img/placeholder-2.MOV"></video>
               </div>
               <div class="carrousel-item">
-                <video src="img/IMG_0270.MOV"></video>
+                <video src="img/placeholder-2.MOV"></video>
               </div>
               <div class="carrousel-item">
-                <video src="img/IMG_0270.MOV"></video>
+                <video src="img/placeholder-2.MOV"></video>
               </div>
               <div class="carrousel-item">
-                <video src="img/IMG_0270.MOV"></video>
+                <video src="img/placeholder-2.MOV"></video>
               </div>
               <div class="carrousel-item">
-                <video src="img/IMG_0270.MOV"></video>
+                <video src="img/placeholder-2.MOV"></video>
               </div>
             </div>
             <div class="carrousel-controls">
@@ -178,23 +196,61 @@
               <div class="col-12">
                 <h2>Événements</h2>
               </div>
-              <div class="col-12 col-md-11 offset-md-1">
-                <div class="events-cont">
-                  <extends
-                    src="event.html"
-                    locals='{"eventTitle":"130 ans - Inauguration de l’EMF", 
-                  "eventImg": "emf-1.jpg", 
-                  "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation" }'
-                  ></extends>
-                  <extends
-                    src="event.html"
-                    locals='{"eventTitle":"130 ans - Inauguration de l’EMF", 
-                  "eventImg": "emf-1.jpg", 
-                  "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation" }'
-                  ></extends>
-                </div>
-              </div>
             </div>
+          </div>
+          <div class="events-cont">
+            <extends
+              src="event.html"
+              locals='{"eventTitle":"130 ans - Inauguration de l’EMF", 
+            "eventImg": "emf-1.jpg", "eventValue": "emf",
+            "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation", "eventPlace": "Chemin du Musée 2 1700  Fribourg" }'
+            >
+              <block name="cta"><p>hey</p></block>
+              <block name="description">
+                <p>
+                  Le 14 janvier 2026 dès 15h00, l’École des Métiers ouvrira les
+                  festivités de ses 130 ans avec une inauguration officielle. Ce
+                  moment fort marquera le lancement de six mois de célébrations
+                  autour de la transmission, de la pédagogie et du savoir-faire.
+                  À travers discours, rencontres et surprises, cette soirée
+                  rendra hommage à toutes celles et ceux qui font vivre l’école
+                  depuis plus d’un siècle. Une belle occasion de réunir la
+                  communauté EMF autour de ses valeurs fondatrices et de
+                  célébrer ensemble un héritage tourné vers l’avenir.
+                </p>
+              </block>
+              <block name="links"><a href="">instagram</a></block>
+            </extends>
+            <extends
+              src="event.html"
+              locals='{"eventTitle":"130 ans MAHf- Inauguration de l’EMF", 
+            "eventImg": "emf-1.jpg", "eventValue": "mahf",
+            "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation",  "eventPlace": "Chemin du Musée 2, 1700 Fribourg" }'
+            >
+              <block name="cta"
+                ><a href="" class="btn outline lang">Acheter</a></block
+              >
+              <block name="description">
+                <p>
+                  Le 14 janvier 2026 dès 15h00, l’École des Métiers ouvrira les
+                  festivités de ses 130 ans avec une inauguration officielle. Ce
+                  moment fort marquera le lancement de six mois de célébrations
+                  autour de la transmission, de la pédagogie et du savoir-faire.
+                  À travers discours, rencontres et surprises, cette soirée
+                  rendra hommage à toutes celles et ceux qui font vivre l’école
+                  depuis plus d’un siècle. Une belle occasion de réunir la
+                  communauté EMF autour de ses valeurs fondatrices et de
+                  célébrer ensemble un héritage tourné vers l’avenir.
+                </p>
+              </block>
+              <block name="links"><a href="">instagram</a></block></extends
+            >
+          </div>
+          <div class="event-pdf-cont">
+            <!-- @TODO: ajouter les liens vers pdf -->
+            <a href="" class="btn outline"
+              >Programme en pdf<span>Programme en pdf</span></a
+            >
           </div>
         </section>
         <section id="books">
@@ -204,6 +260,7 @@
                 <div class="books-cont first">
                   <h3 class="books-title">Livre des 130 ans</h3>
                   <p class="books-description">
+                    <!-- @TODO: changer texte -->
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. <br />
@@ -211,10 +268,13 @@
                     laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                     irure dolor in reprehenderit
                   </p>
-                  <a href="" class="btn outline">Acheter<span>Acheter</span></a>
+                  <!-- @TODO: ajouter les liens d'achat des livres -->
+                  <a href="" class="btn outline light"
+                    >Acheter<span>Acheter</span></a
+                  >
                   <div class="books-bg">
                     <img
-                      src="img/book-emf.jpg"
+                      src="img/book-emf.jpg?as=webp"
                       alt="Photo du livre des 130 ans de l'EMF"
                     />
                   </div>
@@ -222,7 +282,10 @@
               </div>
               <div class="col-12 col-md-6 g-0">
                 <div class="books-cont second">
-                  <a href="" class="btn outline">Acheter<span>Acheter</span></a>
+                  <!-- @TODO: ajouter les liens d'achat des livres -->
+                  <a href="" class="btn outline light"
+                    >Acheter<span>Acheter</span></a
+                  >
                   <p class="books-description">
                     Plongez au cœur de l’exposition « La mission de l’artiste –
                     Dialogues contemporains avec F. Hodler » grâce à cet
@@ -235,7 +298,7 @@
                   <h3 class="books-title">Livre d’exposition</h3>
                   <div class="books-bg">
                     <img
-                      src="img/book-hodler.jpg"
+                      src="img/book-hodler.jpg?as=webp"
                       alt="Photo du livre de l'exposition de Ferdinand Hodler"
                     />
                   </div>
@@ -257,7 +320,7 @@
                     class="sponsor"
                     target="_blank"
                   >
-                    <img src="img/logo_deef.png" alt="" />
+                    <img src="img/logo_deef.png?as=webp" alt="" />
                   </a>
                   <a
                     href="https://collectionmahf.fr.ch"
@@ -278,7 +341,7 @@
                     class="sponsor"
                     target="_blank"
                   >
-                    <img src="img/logo_ville_fribourg.png" alt="" />
+                    <img src="img/logo_ville_fribourg.png?as=webp" alt="" />
                   </a>
                 </div>
               </div>
@@ -393,10 +456,10 @@
           </div>
         </div>
       </div>
-      <div class="spacer"></div>
+      <div class="spacer" id="contact"></div>
     </main>
 
-    <footer id="contact">
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-4">
@@ -415,9 +478,9 @@
           </div>
           <div class="col-6 col-md-5">
             <div class="footer-logos">
-              <a href="" class="footer-logo"
-                ><img src="img/logo_emf_dark.png" alt="" /></a
-              ><a href="" class="footer-logo"
+              <a href="https://www.fr.ch/emf" class="footer-logo"
+                ><img src="img/logo_emf_dark.png?as=webp" alt="" /></a
+              ><a href="https://www.fr.ch" class="footer-logo"
                 ><img src="img/logo_etat-fribourg.svg" class="frib" alt=""
               /></a>
               <p class="footer-legal">© Etat de Fribourg</p>
@@ -425,11 +488,36 @@
           </div>
           <div class="col-6 col-md-3">
             <div class="footer-links">
-              <a href="" target="_blank" class="footer-link">emf.ch</a>
-              <a href="" target="_blank" class="footer-link">youtube</a>
-              <a href="" target="_blank" class="footer-link">instagram</a>
-              <a href="" target="_blank" class="footer-link">linkedin</a>
-              <a href="" target="_blank" class="footer-link">facebook</a>
+              <a
+                href="https://www.fr.ch/emf"
+                target="_blank"
+                class="footer-link"
+                >emf.ch</a
+              >
+              <a
+                href="https://www.youtube.com/channel/UCrSF12KiaS4Pa0Y6dogs1cQ"
+                target="_blank"
+                class="footer-link"
+                >youtube</a
+              >
+              <a
+                href="https://www.instagram.com/emfribourg?igsh=M3ljc3VuZHJnNGxw"
+                target="_blank"
+                class="footer-link"
+                >instagram</a
+              >
+              <a
+                href="https://www.linkedin.com/company/ecole-des-métiers-de-fribourg/about/"
+                target="_blank"
+                class="footer-link"
+                >linkedin</a
+              >
+              <a
+                href="https://www.facebook.com/profile.php?id=100048854336053"
+                target="_blank"
+                class="footer-link"
+                >facebook</a
+              >
             </div>
           </div>
         </div>
