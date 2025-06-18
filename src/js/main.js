@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
   {
     // add controls on hover
     const carrouselVids = document.querySelectorAll(".carrousel-item video");
+    const playBtns = document.querySelectorAll(".carrousel-play-btn");
 
     carrouselVids.forEach((video) => {
       video.addEventListener("mouseenter", () => {
@@ -172,6 +173,19 @@ document.addEventListener("DOMContentLoaded", () => {
       video.addEventListener("mouseleave", () => {
         video.removeAttribute("controls", "");
       });
+
+      if (window.innerWidth < 768) {
+        video.addEventListener("play", () => {
+          playBtns.forEach((btn) => {
+            btn.style.display = "none";
+          });
+        });
+        video.addEventListener("pause", () => {
+          playBtns.forEach((btn) => {
+            btn.style.display = "block";
+          });
+        });
+      }
     });
   }
 
@@ -216,12 +230,14 @@ document.addEventListener("DOMContentLoaded", () => {
               (isDesktop && popup.classList.contains("desktop")))
           ) {
             popup.classList.add("open");
+            bg.classList.add("active");
 
             const closeBtn = popup.querySelector(".event-detail-cross-cont");
             if (closeBtn) {
               closeBtn.addEventListener("click", (e) => {
                 e.stopPropagation(); // prevent bubbling
                 popup.classList.remove("open");
+                bg.classList.remove("active");
               });
             }
           }
