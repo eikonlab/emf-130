@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.querySelector("body");
   {
     // bubble interactive
 
@@ -41,6 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
       burger.classList.toggle("active");
       menu.classList.toggle("active");
       bg.classList.toggle("active");
+      body.classList.toggle("no-scroll");
+    });
+    bg.addEventListener("click", () => {
+      burger.classList.remove("active");
+      menu.classList.remove("active");
+      bg.classList.remove("active");
+      body.classList.remove("no-scroll");
     });
 
     window.addEventListener("resize", () => {
@@ -48,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         burger.classList.remove("active");
         menu.classList.remove("active");
         bg.classList.remove("active");
+        body.classList.remove("no-scroll");
       }
     });
   }
@@ -140,6 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".header-burger-link a"),
       "--random-color"
     );
+    applyRandomColorOnHover(
+      document.querySelectorAll(".event-detail-links a"),
+      "--random-color"
+    );
   }
 
   {
@@ -164,26 +177,16 @@ document.addEventListener("DOMContentLoaded", () => {
   {
     // add controls on hover
     const carrouselVids = document.querySelectorAll(".carrousel-item video");
-    const playBtns = document.querySelectorAll(".carrousel-play-btn");
 
     carrouselVids.forEach((video) => {
-      video.addEventListener("mouseenter", () => {
-        video.setAttribute("controls", "");
-      });
-      video.addEventListener("mouseleave", () => {
+      if (window.innerWidth > 768) {
         video.removeAttribute("controls", "");
-      });
 
-      if (window.innerWidth < 768) {
-        video.addEventListener("play", () => {
-          playBtns.forEach((btn) => {
-            btn.style.display = "none";
-          });
+        video.addEventListener("mouseenter", () => {
+          video.setAttribute("controls", "");
         });
-        video.addEventListener("pause", () => {
-          playBtns.forEach((btn) => {
-            btn.style.display = "block";
-          });
+        video.addEventListener("mouseleave", () => {
+          video.removeAttribute("controls", "");
         });
       }
     });
@@ -193,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // second screen anim scrolltrigger
 
     if (window.innerWidth > 768) {
-      const screen = document.querySelector(".white-bg");
+      const screen = document.querySelector(".about-cont");
 
       gsap.from(screen, {
         scale: 0.9,
@@ -212,6 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // popup
     const thumbs = document.querySelectorAll(".event-thumb");
     const popups = document.querySelectorAll(".event-detail-cont");
+    const bgPop = document.querySelector(".background.event");
 
     thumbs.forEach((thumb) => {
       const value = thumb.dataset.value;
@@ -230,19 +234,46 @@ document.addEventListener("DOMContentLoaded", () => {
               (isDesktop && popup.classList.contains("desktop")))
           ) {
             popup.classList.add("open");
-            bg.classList.add("active");
+            bgPop.classList.add("active");
+            body.classList.add("no-scroll");
 
             const closeBtn = popup.querySelector(".event-detail-cross-cont");
             if (closeBtn) {
               closeBtn.addEventListener("click", (e) => {
                 e.stopPropagation(); // prevent bubbling
                 popup.classList.remove("open");
-                bg.classList.remove("active");
+                bgPop.classList.remove("active");
+                body.classList.remove("no-scroll");
               });
             }
+            bgPop.addEventListener("click", () => {
+              popup.classList.remove("open");
+              bgPop.classList.remove("active");
+              body.classList.remove("no-scroll");
+            });
           }
         });
       });
+    });
+  }
+
+  {
+    //header down up
+
+    const header = document.querySelector(".header-nav");
+
+    let lastScrollPosition = 0;
+
+    window.addEventListener("scroll", () => {
+      let currentScrollPosition = window.scrollY;
+
+      if (currentScrollPosition > lastScrollPosition) {
+        header.classList.add("scrolling-down");
+      } else {
+        header.classList.remove("scrolling-down");
+      }
+
+      lastScrollPosition = currentScrollPosition;
     });
   }
 });

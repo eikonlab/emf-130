@@ -16,6 +16,10 @@ video {
 body {
   font-family: "Satoshi", sans-serif;
   color: $dark;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -24,6 +28,10 @@ html {
 .spacer {
   height: 100svh;
   pointer-events: none;
+
+  &.end {
+    height: 120svh;
+  }
 }
 
 *::selection {
@@ -43,6 +51,8 @@ html {
 
   &.active {
     opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
   }
 }
 
@@ -50,7 +60,6 @@ html {
   background: $light;
   position: relative;
   z-index: 1;
-  box-shadow: 0px -16px 50px 0px rgba(0, 0, 0, 0.1);
 }
 
 h2 {

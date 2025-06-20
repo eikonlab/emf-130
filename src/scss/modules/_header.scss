@@ -12,6 +12,13 @@
     rgba(255, 255, 255, 0) 100%
   );
   backdrop-filter: blur(1.5px);
+
+  transform: translatey(0);
+  transition: transform 0.3s ease-out;
+
+  &.scrolling-down {
+    transform: translatey(-100%);
+  }
 }
 
 .header-logo {

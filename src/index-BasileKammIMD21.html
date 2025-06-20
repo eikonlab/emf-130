@@ -177,6 +177,12 @@ tous en fête en 2026"
                 ></video>
               </div>
               <div class="carrousel-item">
+                <img
+                  loading="lazy"
+                  src="img/play-btn.png?as=webp"
+                  alt=""
+                  class="carrousel-play-btn"
+                />
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
@@ -184,6 +190,12 @@ tous en fête en 2026"
                 ></video>
               </div>
               <div class="carrousel-item">
+                <img
+                  loading="lazy"
+                  src="img/play-btn.png?as=webp"
+                  alt=""
+                  class="carrousel-play-btn"
+                />
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
@@ -191,6 +203,12 @@ tous en fête en 2026"
                 ></video>
               </div>
               <div class="carrousel-item">
+                <img
+                  loading="lazy"
+                  src="img/play-btn.png?as=webp"
+                  alt=""
+                  class="carrousel-play-btn"
+                />
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
@@ -198,6 +216,12 @@ tous en fête en 2026"
                 ></video>
               </div>
               <div class="carrousel-item">
+                <img
+                  loading="lazy"
+                  src="img/play-btn.png?as=webp"
+                  alt=""
+                  class="carrousel-play-btn"
+                />
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
@@ -215,7 +239,7 @@ tous en fête en 2026"
             </div>
           </div>
         </section>
-        <section class="event-cont" id="events">
+        <section class="event" id="events">
           <div class="container">
             <div class="row">
               <div class="col-12">
@@ -224,13 +248,13 @@ tous en fête en 2026"
             </div>
           </div>
           <div class="events-cont">
-            <!-- @TODO - contenu + img des events-->
             <extends
               src="event.html"
               locals='{"eventTitle":"130 ans - Inauguration de l’EMF", 
-            "eventImg": "event-emf.jpg", "eventValue": "emf",
+            "eventImg": "emf-1.jpg", "eventValue": "emf",
             "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation", "eventPlace": "Chemin du Musée 2 1700  Fribourg" }'
             >
+              <block name="cta"><p>hey</p></block>
               <block name="description">
                 <p>
                   Le 14 janvier 2026 dès 15h00, l’École des Métiers ouvrira les
@@ -245,6 +269,7 @@ tous en fête en 2026"
                 </p>
               </block>
               <block name="links">
+                <a href="">instagram</a>
                 <a
                   href="https://www.fr.ch/emf"
                   target="_blank"
@@ -253,318 +278,30 @@ tous en fête en 2026"
                 >
               </block>
             </extends>
-            <!-- @TODO - prix de l'event -->
             <extends
               src="event.html"
-              locals='{"eventTitle":"Morat Festival des lumières", 
-            "eventImg": "event-morat-lumiere.jpg", "eventValue": "morat",
-            "eventDate": "21 janvier au 1 février 2026 | 18h - 22h","eventPrice": "Entrée: 16chf",  
-            "eventPlace": "Morat" }'
+              locals='{"eventTitle":" MAHf- Inauguration de l’EMF", 
+            "eventImg": "emf-1.jpg", "eventValue": "mahf",
+            "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation",  "eventPlace": "Chemin du Musée 2, 1700 Fribourg" }'
             >
               <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
-                ></block
+                ><a href="" class="btn outline lang">Acheter</a></block
               >
               <block name="description">
                 <p>
-                  Dans le cadre du Festival des Lumières, une œuvre collective,
-                  née de la collaboration entre Eikon, la HEIAFR, Minus 3 et
-                  l’EMF, sera présentée, explorant la notion de transmission à
-                  travers la lumière et la technologie. Ce projet innovant mêle
-                  savoir-faire, pédagogie et créativité, et symbolise le passage
-                  de la connaissance et des compétences.
+                  Le 14 janvier 2026 dès 15h00, l’École des Métiers ouvrira les
+                  festivités de ses 130 ans avec une inauguration officielle. Ce
+                  moment fort marquera le lancement de six mois de célébrations
+                  autour de la transmission, de la pédagogie et du savoir-faire.
+                  À travers discours, rencontres et surprises, cette soirée
+                  rendra hommage à toutes celles et ceux qui font vivre l’école
+                  depuis plus d’un siècle. Une belle occasion de réunir la
+                  communauté EMF autour de ses valeurs fondatrices et de
+                  célébrer ensemble un héritage tourné vers l’avenir.
                 </p>
               </block>
-              <block name="links">
-                <a
-                  href="https://www.facebook.com/murtenlichtfest"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/murten_licht_festival/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  instagram
-                </a>
-                <a
-                  href="https://www.youtube.com/watch?v=AzwjbMZZReo"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  youtube
-                </a>
-                <a
-                  href="https://fr.murtenlichtfestival.ch"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  murtenlichetfestival.ch
-                </a>
-              </block></extends
+              <block name="links"><a href="">instagram</a></block></extends
             >
-            <!-- @TODO - prix, ticketerie ?, liens et réseaux de l'event -->
-            <extends
-              src="event.html"
-              locals='{"eventTitle":"Exposition la mission de l’artiste – Dialogues contemporains avec F.Hodler", 
-            "eventImg": "event-hodler.jpg", "eventValue": "holder",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
-            "eventPlace": "Morat" }'
-            >
-              <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
-                ></block
-              >
-              <block name="description">
-                <p>
-                  L’exposition « la mission de l’artiste – Dialogues
-                  contemporains avec F.Hodler » sera présentée du 28 janvier au
-                  28 février 2026. Onze artistes contemporains y exposeront
-                  leurs œuvres, chacun explorant, à sa manière, l’héritage de
-                  Hodler et la notion de transmission dans l’art. À travers
-                  leurs créations, ces artistes interrogent la place de
-                  l’artiste dans la société d’aujourd'hui, tout en rendant
-                  hommage à l’impact durable du travail de Ferdinand Hodler.
-                </p>
-              </block>
-              <block name="links">
-                <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  instagram
-                </a>
-                <a
-                  href="https://www.fr.ch/mahf"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  mahf.ch
-                </a>
-              </block></extends
-            >
-            <!-- @TODO - prix, titre, ticketerie ? de l'event -->
-            <extends
-              src="event.html"
-              locals='{"eventTitle":"Exposition Hodler au Musée d’Art et d’Histoire de Fribourg", 
-            "eventImg": "event-mahf.jpg", "eventValue": "mahf",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée: 16chf",  
-            "eventPlace": "Morat" }'
-            >
-              <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
-                ></block
-              >
-              <block name="description">
-                <p>
-                  Au MAHF, une exposition exceptionnelle mettra en lumière la
-                  période fribourgeoise de Ferdinand Hodler. Seront présentés
-                  plusieurs tableaux réalisés lors de son séjour à Fribourg,
-                  révélant une facette de son œuvre. Le public pourra également
-                  découvrir, pour la première fois, l’original de sa célèbre
-                  conférence « La mission de l’artiste », ainsi que des croquis
-                  issus de son carnet de dessins fribourgeois.
-                </p>
-              </block>
-              <block name="links">
-                <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  instagram
-                </a>
-                <a
-                  href="https://www.fr.ch/mahf"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  mahf.ch
-                </a>
-              </block></extends
-            >
-
-            <!-- @TODO - tout le contenu de l'event -->
-            <extends
-              src="event.html"
-              locals='{"eventTitle":"Installation EMF", 
-            "eventImg": "event-phanee.jpg", "eventValue": "instal",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
-            "eventPlace": "Morat" }'
-            >
-              <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
-                ></block
-              >
-              <block name="description">
-                <p>
-                  L’exposition « la mission de l’artiste – Dialogues
-                  contemporains avec F.Hodler » sera présentée du 28 janvier au
-                  28 février 2026. Onze artistes contemporains y exposeront
-                  leurs œuvres, chacun explorant, à sa manière, l’héritage de
-                  Hodler et la notion de transmission dans l’art. À travers
-                  leurs créations, ces artistes interrogent la place de
-                  l’artiste dans la société d’aujourd'hui, tout en rendant
-                  hommage à l’impact durable du travail de Ferdinand Hodler.
-                </p>
-              </block>
-              <block name="links">
-                <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  instagram
-                </a>
-                <a
-                  href="https://www.fr.ch/mahf"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  mahf.ch
-                </a>
-              </block></extends
-            >
-            <!-- @TODO - tout le contenu de l'event -->
-            <extends
-              src="event.html"
-              locals='{"eventTitle":"Musée EMF", 
-            "eventImg": "event-phanee.jpg", "eventValue": "musee",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
-            "eventPlace": "Morat" }'
-            >
-              <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
-                ></block
-              >
-              <block name="description">
-                <p>
-                  L’exposition « la mission de l’artiste – Dialogues
-                  contemporains avec F.Hodler » sera présentée du 28 janvier au
-                  28 février 2026. Onze artistes contemporains y exposeront
-                  leurs œuvres, chacun explorant, à sa manière, l’héritage de
-                  Hodler et la notion de transmission dans l’art. À travers
-                  leurs créations, ces artistes interrogent la place de
-                  l’artiste dans la société d’aujourd'hui, tout en rendant
-                  hommage à l’impact durable du travail de Ferdinand Hodler.
-                </p>
-              </block>
-              <block name="links">
-                <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  instagram
-                </a>
-                <a
-                  href="https://www.fr.ch/mahf"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  mahf.ch
-                </a>
-              </block></extends
-            >
-            <!-- @TODO - tout le contenu de l'event -->
-            <extends
-              src="event.html"
-              locals='{"eventTitle":"Festival de musique", 
-            "eventImg": "event-phanee.jpg", "eventValue": "phanee",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
-            "eventPlace": "Morat" }'
-            >
-              <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
-                ></block
-              >
-              <block name="description">
-                <p>
-                  L’exposition « la mission de l’artiste – Dialogues
-                  contemporains avec F.Hodler » sera présentée du 28 janvier au
-                  28 février 2026. Onze artistes contemporains y exposeront
-                  leurs œuvres, chacun explorant, à sa manière, l’héritage de
-                  Hodler et la notion de transmission dans l’art. À travers
-                  leurs créations, ces artistes interrogent la place de
-                  l’artiste dans la société d’aujourd'hui, tout en rendant
-                  hommage à l’impact durable du travail de Ferdinand Hodler.
-                </p>
-              </block>
-              <block name="links">
-                <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  instagram
-                </a>
-                <a
-                  href="https://www.fr.ch/mahf"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  mahf.ch
-                </a>
-              </block></extends
-            >
-
             <div class="background event"></div>
           </div>
           <div class="event-pdf-cont">
@@ -790,7 +527,7 @@ tous en fête en 2026"
         </div>
       </div>
       <div class="background"></div>
-      <div class="spacer end" id="contact"></div>
+      <div class="spacer" id="contact"></div>
     </main>
 
     <footer>

@@ -2,6 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
+        <!-- Thumbnail Mobile -->
         <div class="event-thumb mobile" data-value="{{eventValue}}">
           <div class="event-flex-titles d-flex justify-content-between">
             <div class="event-text d-flex flex-column gap-10">
@@ -22,6 +23,7 @@
         </div>
       </div>
       <div class="col-11 offset-1">
+        <!-- Thumbnail Desktop -->
         <div
           class="event-thumb desktop align-items-center"
           data-value="{{eventValue}}"
@@ -48,8 +50,10 @@
       </div>
     </div>
   </div>
+
+  <!-- Popup Mobile -->
   <div class="event-detail-cont mobile {{eventValue}}">
-    <div class="event-detail-cross-cont">
+    <div class="event-detail-cross-cont mobile">
       <img loading="lazy" src="img/cross.svg" alt="" />
     </div>
     <div class="event-detail-img-flex">
@@ -74,16 +78,19 @@
     </div>
   </div>
 
-  <!-- Desktop -->
+  <!-- Popup Desktop -->
 
   <div class="event-detail-cont desktop {{eventValue}}">
     <div class="container">
       <div class="row">
-        <div class="col-5">
+        <div class="col-6">
           <div class="event-detail-flex">
             <div class="event-details-titles">
               <h3 class="event-title">{{eventTitle}}</h3>
-              <p class="event-price">{{eventPrice}}</p>
+              <div class="event-details-price-cont">
+                <p class="event-price">{{eventPrice}}</p>
+                <block name="cta"></block>
+              </div>
             </div>
             <div class="row">
               <div class="col-9">
@@ -92,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-2">
           <div class="event-detail-flex">
             <div></div>
             <div class="event-detail-place">
