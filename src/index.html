@@ -180,6 +180,7 @@ tous en fête en 2026"
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
+                  controls
                   poster="img/video-poster.jpg"
                 ></video>
               </div>
@@ -187,6 +188,7 @@ tous en fête en 2026"
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
+                  controls
                   poster="img/video-poster.jpg"
                 ></video>
               </div>
@@ -194,6 +196,7 @@ tous en fête en 2026"
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
+                  controls
                   poster="img/video-poster.jpg"
                 ></video>
               </div>
@@ -201,6 +204,7 @@ tous en fête en 2026"
                 <video
                   src="video/placeholder-2.MOV"
                   playsinline
+                  controls
                   poster="img/video-poster.jpg"
                 ></video>
               </div>
@@ -229,7 +233,8 @@ tous en fête en 2026"
               src="event.html"
               locals='{"eventTitle":"130 ans - Inauguration de l’EMF", 
             "eventImg": "event-emf.jpg", "eventValue": "emf",
-            "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation", "eventPlace": "Chemin du Musée 2 1700  Fribourg" }'
+            "eventDate": "14 janvier 2026 | 15h00 - 20h30","eventPrice": "sur invitation", 
+            "eventPlace": "Chemin du Musée 2 1700  Fribourg" }'
             >
               <block name="description">
                 <p>
@@ -258,7 +263,7 @@ tous en fête en 2026"
               src="event.html"
               locals='{"eventTitle":"Morat Festival des lumières", 
             "eventImg": "event-morat-lumiere.jpg", "eventValue": "morat",
-            "eventDate": "21 janvier au 1 février 2026 | 18h - 22h","eventPrice": "Entrée: 16chf",  
+            "eventDate": "21 janvier au 1 février 2026 | 18h - 22h","eventPrice": "Selon le festival des lumières ",  
             "eventPlace": "Morat" }'
             >
               <block name="cta"
@@ -315,7 +320,7 @@ tous en fête en 2026"
               locals='{"eventTitle":"Exposition la mission de l’artiste – Dialogues contemporains avec F.Hodler", 
             "eventImg": "event-hodler.jpg", "eventValue": "holder",
             "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
-            "eventPlace": "Morat" }'
+            "eventPlace": "Pl. de Notre Dame 16 Fribourg" }'
             >
               <block name="cta"
                 ><a
@@ -366,7 +371,7 @@ tous en fête en 2026"
               locals='{"eventTitle":"Exposition Hodler au Musée d’Art et d’Histoire de Fribourg", 
             "eventImg": "event-mahf.jpg", "eventValue": "mahf",
             "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée: 16chf",  
-            "eventPlace": "Morat" }'
+            "eventPlace": "Rue de Morat 12 Fribourg" }'
             >
               <block name="cta"
                 ><a
@@ -642,6 +647,7 @@ tous en fête en 2026"
                     href="https://www.fr.ch/deef"
                     class="sponsor"
                     target="_blank"
+                    aria-label="Lien sur le site de la DEEF"
                   >
                     <img
                       loading="lazy"
@@ -653,6 +659,7 @@ tous en fête en 2026"
                     href="https://collectionmahf.fr.ch"
                     class="sponsor"
                     target="_blank"
+                    aria-label="Lien sur le site du MAHF"
                   >
                     <img loading="lazy" src="img/logo_mahf.svg" alt="" />
                   </a>
@@ -660,6 +667,7 @@ tous en fête en 2026"
                     href="https://www.eikon.ch"
                     class="sponsor"
                     target="_blank"
+                    aria-label="Lien sur le site de l'eikon"
                   >
                     <img loading="lazy" src="img/logo_eikon.svg" alt="" />
                   </a>
@@ -667,6 +675,7 @@ tous en fête en 2026"
                     href="https://www.ville-fribourg.ch"
                     class="sponsor"
                     target="_blank"
+                    aria-label="Lien sur le site de la ville de fribourg"
                   >
                     <img
                       loading="lazy"
@@ -758,10 +767,13 @@ tous en fête en 2026"
                     créatif et engagé.
                   </p>
                   <div class="emf-btn-cont">
-                    <a href="" class="btn dark"
+                    <a href="https://www.emf.ch/" class="btn dark"
                       >En savoir plus <span>En savoir plus</span></a
                     >
-                    <a href="" class="btn small pan">
+                    <a
+                      href="https://www.youtube.com/watch?v=h4ixlm0ugJw"
+                      class="btn small pan"
+                    >
                       <span>Vidéo de présentation de l’EMF</span></a
                     >
                   </div>
@@ -812,12 +824,18 @@ tous en fête en 2026"
           </div>
           <div class="col-6 col-md-5">
             <div class="footer-logos">
-              <a href="https://www.fr.ch/emf" class="footer-logo"
+              <a
+                href="https://www.fr.ch/emf"
+                class="footer-logo"
+                aria-label="Lien vers le site de l'EMF"
                 ><img
                   loading="lazy"
                   src="img/logo_emf_dark.png?as=webp"
                   alt="" /></a
-              ><a href="https://www.fr.ch" class="footer-logo"
+              ><a
+                href="https://www.fr.ch"
+                class="footer-logo"
+                aria-label="Lien vers le site de l'état de Fribourg"
                 ><img
                   loading="lazy"
                   src="img/logo_etat-fribourg.svg"

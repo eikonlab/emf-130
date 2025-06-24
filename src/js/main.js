@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top top",
       onEnter: () => {
         gsap.set(banner, { display: "none" });
-        gsap.set(footer, { display: "block" });
+        gsap.set(footer, { display: "flex" });
       },
       onLeaveBack: () => {
         gsap.set(banner, { display: "flex" });

@@ -127,7 +127,7 @@
   z-index: 0;
   width: 100vw;
   height: 100svh;
-  padding: 4vh 4vw;
+  padding: 4vh 4vw 8vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -140,7 +140,7 @@
 }
 
 .banner-title {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 500;
   line-height: 69px; /* 84.146% */
   text-transform: uppercase;

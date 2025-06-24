@@ -60,20 +60,20 @@
 
 .event-info-cont {
   gap: 10px;
+  align-items: center;
   p {
     font-weight: 700;
     font-size: 16px;
   }
-}
 
-.event-flex-titles {
-  max-width: 50%;
+  path {
+    fill: $dark;
+  }
 }
 
 .event-date {
   font-weight: 400;
   font-size: 16px;
-  text-align: right;
 }
 
 .event-thumb.desktop {
@@ -121,6 +121,10 @@
     width: 80%;
   }
 
+  .event-flex-titles {
+    max-width: 50%;
+  }
+
   .event-thumb-img {
     margin-right: 30px;
     margin-bottom: 0;
@@ -137,6 +141,7 @@
 
   .event-date {
     margin-right: 12px;
+    text-align: right;
   }
 }
 
@@ -144,34 +149,46 @@
   &:nth-child(4n + 1) {
     .event-thumb.desktop:hover {
       color: $yellow;
+      path {
+        fill: $yellow;
+      }
     }
   }
   &:nth-child(4n + 2) {
     .event-thumb.desktop:hover {
       color: $purple;
+      path {
+        fill: $purple;
+      }
     }
   }
   &:nth-child(4n + 3) {
     .event-thumb.desktop:hover {
       color: $red;
+      path {
+        fill: $red;
+      }
     }
   }
   &:nth-child(4n + 4) {
     .event-thumb.desktop:hover {
       color: $blue;
+      path {
+        fill: $blue;
+      }
     }
   }
 }
 
 .event-detail-cont {
-  transform: translateY(100%);
+  transform: translateY(120%);
   position: fixed;
   z-index: 10;
   left: 0;
   top: 10vh;
   bottom: 0;
   height: 90vh;
-  right: 0;
+  width: 100vw;
   background: $light;
   display: block;
 
@@ -206,6 +223,18 @@
   padding: 16px;
   box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.8);
 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+
   img {
     position: absolute;
     height: 100%;
@@ -219,6 +248,8 @@
     position: relative;
     z-index: 2;
     margin-bottom: 0;
+
+    color: $light;
   }
 }
 
