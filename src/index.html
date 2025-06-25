@@ -12,14 +12,17 @@
       content="130 ans de transmission,
 tous en fête en 2026"
     />
-    <meta property="og:image" content="img/opengraph-img.webp" />
+    <meta
+      property="og:image"
+      content="https://130ans.emf.ch/opengraph-img.webp"
+    />
   </head>
   <body>
     <script src="js/language.js" type="module"></script>
     <header class="header-cont">
       <nav class="header-nav">
         <a href="" class="header-logo">
-          <img src="img/EMF_logo.png?as=webp" alt="Logo de l'EMF" />
+          <img src="img/EMF_logo.png?as=webp&width=200" alt="Logo de l'EMF" />
         </a>
         <div class="header-burger-icon" aria-label="Open burger menu">
           <span></span><span></span>
@@ -131,12 +134,16 @@ tous en fête en 2026"
             <div class="col-12 col-md-6">
               <div class="about-video">
                 <!-- @TODO: ajouter bonne video -->
-                <video
-                  src="video/placeholder-1.MOV"
-                  playsinline
-                  poster="img/emf-2.webp"
-                  controls
-                ></video>
+                <video playsinline controls poster="img/video-poster.png">
+                  <source
+                    src="video/interview-placeholder.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="video/interview-placeholder.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
             </div>
           </div>
@@ -169,44 +176,64 @@ tous en fête en 2026"
             <div class="carrousel">
               <!-- @TODO: ajouter bonne video -->
               <div class="carrousel-item">
-                <video
-                  src="video/placeholder-2.MOV"
-                  playsinline
-                  controls
-                  poster="img/video-poster.jpg"
-                ></video>
+                <video playsinline controls poster="img/video-poster.png">
+                  <source
+                    src="video/interview-placeholder.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="video/interview-placeholder.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
               <div class="carrousel-item">
-                <video
-                  src="video/placeholder-2.MOV"
-                  playsinline
-                  controls
-                  poster="img/video-poster.jpg"
-                ></video>
+                <video playsinline controls poster="img/video-poster.png">
+                  <source
+                    src="video/interview-placeholder.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="video/interview-placeholder.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
               <div class="carrousel-item">
-                <video
-                  src="video/placeholder-2.MOV"
-                  playsinline
-                  controls
-                  poster="img/video-poster.jpg"
-                ></video>
+                <video playsinline controls poster="img/video-poster.png">
+                  <source
+                    src="video/interview-placeholder.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="video/interview-placeholder.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
               <div class="carrousel-item">
-                <video
-                  src="video/placeholder-2.MOV"
-                  playsinline
-                  controls
-                  poster="img/video-poster.jpg"
-                ></video>
+                <video playsinline controls poster="img/video-poster.png">
+                  <source
+                    src="video/interview-placeholder.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="video/interview-placeholder.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
               <div class="carrousel-item">
-                <video
-                  src="video/placeholder-2.MOV"
-                  playsinline
-                  controls
-                  poster="img/video-poster.jpg"
-                ></video>
+                <video playsinline controls poster="img/video-poster.png">
+                  <source
+                    src="video/interview-placeholder.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="video/interview-placeholder.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
             </div>
             <div class="carrousel-controls">
@@ -270,7 +297,7 @@ tous en fête en 2026"
                 ><a
                   href="https://fr.murtenlichtfestival.ch/tickets"
                   class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
+                  >Billeterie <span>Billeterie</span></a
                 ></block
               >
               <block name="description">
@@ -314,7 +341,7 @@ tous en fête en 2026"
                 </a>
               </block></extends
             >
-            <!-- @TODO - prix, ticketerie ?, liens et réseaux de l'event -->
+            <!-- @TODO - prix, Billeterie ?, liens et réseaux de l'event -->
             <extends
               src="event.html"
               locals='{"eventTitle":"Exposition la mission de l’artiste – Dialogues contemporains avec F.Hodler", 
@@ -326,7 +353,7 @@ tous en fête en 2026"
                 ><a
                   href="https://fr.murtenlichtfestival.ch/tickets"
                   class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
+                  >Billeterie <span>Billeterie</span></a
                 ></block
               >
               <block name="description">
@@ -365,7 +392,7 @@ tous en fête en 2026"
                 </a>
               </block></extends
             >
-            <!-- @TODO - prix, titre, ticketerie ? de l'event -->
+            <!-- @TODO - prix, titre, Billeterie ? de l'event -->
             <extends
               src="event.html"
               locals='{"eventTitle":"Exposition Hodler au Musée d’Art et d’Histoire de Fribourg", 
@@ -377,7 +404,7 @@ tous en fête en 2026"
                 ><a
                   href="https://fr.murtenlichtfestival.ch/tickets"
                   class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
+                  >Billeterie <span>Billeterie</span></a
                 ></block
               >
               <block name="description">
@@ -428,7 +455,7 @@ tous en fête en 2026"
                 ><a
                   href="https://fr.murtenlichtfestival.ch/tickets"
                   class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
+                  >Billeterie <span>Billeterie</span></a
                 ></block
               >
               <block name="description">
@@ -479,7 +506,7 @@ tous en fête en 2026"
                 ><a
                   href="https://fr.murtenlichtfestival.ch/tickets"
                   class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
+                  >Billeterie <span>Billeterie</span></a
                 ></block
               >
               <block name="description">
@@ -530,7 +557,7 @@ tous en fête en 2026"
                 ><a
                   href="https://fr.murtenlichtfestival.ch/tickets"
                   class="btn outline event-cta"
-                  >Ticketerie <span>Ticketerie</span></a
+                  >Billeterie <span>Billeterie</span></a
                 ></block
               >
               <block name="description">
@@ -767,12 +794,16 @@ tous en fête en 2026"
                     créatif et engagé.
                   </p>
                   <div class="emf-btn-cont">
-                    <a href="https://www.emf.ch/" class="btn dark"
+                    <a
+                      href="https://www.emf.ch/"
+                      target="_blank"
+                      class="btn dark"
                       >En savoir plus <span>En savoir plus</span></a
                     >
                     <a
                       href="https://www.youtube.com/watch?v=h4ixlm0ugJw"
                       class="btn small pan"
+                      target="_blank"
                     >
                       <span>Vidéo de présentation de l’EMF</span></a
                     >
@@ -822,7 +853,7 @@ tous en fête en 2026"
               </p>
             </div>
           </div>
-          <div class="col-6 col-md-5">
+          <div class="col-6 col-md-6">
             <div class="footer-logos">
               <a
                 href="https://www.fr.ch/emf"
@@ -842,10 +873,24 @@ tous en fête en 2026"
                   class="frib"
                   alt=""
               /></a>
-              <p class="footer-legal">© Etat de Fribourg</p>
+              <div>
+                <p class="footer-legal">© Etat de Fribourg</p>
+                <p class="footer-credits">
+                  Design et code par
+                  <a href="https://basile-kamm.ch" target="_blank"
+                    >Basile Kamm</a
+                  >
+                  /
+                  <a
+                    href="https://www.eikon.ch/departments/eikonlab/"
+                    target="_blank"
+                    >Eikonlab</a
+                  >
+                </p>
+              </div>
             </div>
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-6 col-md-2">
             <div class="footer-links">
               <a
                 href="https://www.fr.ch/emf"

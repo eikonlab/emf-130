@@ -256,6 +256,7 @@
 .event-detail-cross-cont {
   transition: 0.3s;
   cursor: pointer;
+  mix-blend-mode: difference;
 
   &:hover {
     transform: rotate(90deg);
@@ -266,6 +267,7 @@
     z-index: 5;
     right: 16px;
     top: 16px;
+    mix-blend-mode: normal;
   }
 }
 

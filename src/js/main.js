@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Burger menu
     const burger = document.querySelector(".header-burger-icon");
     const menu = document.querySelector(".header-burger-links");
+    const menuLinks = document.querySelectorAll(".header-burger-link");
     const bg = document.querySelector(".background");
 
     burger.addEventListener("click", () => {
@@ -49,6 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.classList.remove("active");
       bg.classList.remove("active");
       body.classList.remove("no-scroll");
+    });
+
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        setTimeout(() => {
+          burger.classList.remove("active");
+          menu.classList.remove("active");
+          bg.classList.remove("active");
+          body.classList.remove("no-scroll");
+        }, 200);
+      });
     });
 
     window.addEventListener("resize", () => {
