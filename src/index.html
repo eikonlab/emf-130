@@ -39,8 +39,7 @@ tous en fête en 2026"
             <a href="#books">Livres</a>
           </li>
           <li class="header-burger-link">
-            <!-- @TODO - add link -->
-            <a href="">Histoire</a>
+            <a href="#presse">Histoire</a>
           </li>
           <li class="header-burger-link">
             <a href="#contact">Contact</a>
@@ -293,8 +292,9 @@ tous en fête en 2026"
               <block name="cta"
                 ><a
                   href="https://fr.murtenlichtfestival.ch/tickets"
+                  target="_blank"
                   class="btn outline event-cta"
-                  >Billeterie <span>Billeterie</span></a
+                  >Billetterie <span>Billetterie</span></a
                 ></block
               >
               <block name="description">
@@ -338,7 +338,7 @@ tous en fête en 2026"
                 </a>
               </block></extends
             >
-            <!-- @TODO - prix, Billeterie ?, liens et réseaux de l'event -->
+            <!-- @TODO - prix, Billetterie ?, liens et réseaux de l'event -->
             <extends
               src="event.html"
               locals='{"eventTitle":"Exposition la mission de l’artiste – Dialogues contemporains avec F.Hodler", 
@@ -348,9 +348,10 @@ tous en fête en 2026"
             >
               <block name="cta"
                 ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
+                  href="https://hodler.emf.ch/"
                   class="btn outline event-cta"
-                  >Billeterie <span>Billeterie</span></a
+                  target="_blank"
+                  >Site <span>Site</span></a
                 ></block
               >
               <block name="description">
@@ -367,41 +368,27 @@ tous en fête en 2026"
               </block>
               <block name="links">
                 <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
+                  href="https://fribourg.ch/fr/fribourg/expositions-temporaires/latelier/"
                   target="_blank"
                   class="footer-link"
+                  >l'Atelier</a
                 >
-                  facebook
-                </a>
-                <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  instagram
-                </a>
-                <a
-                  href="https://www.fr.ch/mahf"
-                  target="_blank"
-                  class="footer-link"
-                >
-                  mahf.ch
-                </a>
               </block></extends
             >
-            <!-- @TODO - prix, titre, Billeterie ? de l'event -->
+            <!-- @TODO - prix, titre, Billetterie ? de l'event -->
             <extends
               src="event.html"
               locals='{"eventTitle":"Exposition Hodler au Musée d’Art et d’Histoire de Fribourg", 
             "eventImg": "event-mahf.jpg", "eventValue": "mahf",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée: 16chf",  
+            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée: 10chf",  
             "eventPlace": "Rue de Morat 12 Fribourg" }'
             >
               <block name="cta"
                 ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
+                  href="http://www.mahf.ch/"
+                  target="_blank"
                   class="btn outline event-cta"
-                  >Billeterie <span>Billeterie</span></a
+                  >Billetterie <span>Billetterie</span></a
                 ></block
               >
               <block name="description">
@@ -445,50 +432,43 @@ tous en fête en 2026"
               src="event.html"
               locals='{"eventTitle":"Installation EMF", 
             "eventImg": "event-phanee.jpg", "eventValue": "instal",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
+            "eventDate": "février à avril 2026","eventPrice": "Entrée gratuite",  
             "eventPlace": "Chemin du Musée 2 Fribourg"  }'
             >
-              <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Billeterie <span>Billeterie</span></a
-                ></block
-              >
+              <block name="cta"></block>
               <block name="description">
                 <p>
-                  L’exposition « la mission de l’artiste – Dialogues
-                  contemporains avec F.Hodler » sera présentée du 28 janvier au
-                  28 février 2026. Onze artistes contemporains y exposeront
-                  leurs œuvres, chacun explorant, à sa manière, l’héritage de
-                  Hodler et la notion de transmission dans l’art. À travers
-                  leurs créations, ces artistes interrogent la place de
-                  l’artiste dans la société d’aujourd'hui, tout en rendant
-                  hommage à l’impact durable du travail de Ferdinand Hodler.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt, nam ad, ea accusantium fugit reprehenderit similique
+                  accusamus quam ab quo dignissimos ipsam quasi quidem quis
+                  laborum architecto. Aut, voluptate error.
                 </p>
               </block>
               <block name="links">
                 <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
+                  href="https://www.youtube.com/channel/UCrSF12KiaS4Pa0Y6dogs1cQ"
                   target="_blank"
                   class="footer-link"
+                  >youtube</a
                 >
-                  facebook
-                </a>
                 <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
+                  href="https://www.instagram.com/emfribourg?igsh=M3ljc3VuZHJnNGxw"
                   target="_blank"
                   class="footer-link"
+                  >instagram</a
                 >
-                  instagram
-                </a>
                 <a
-                  href="https://www.fr.ch/mahf"
+                  href="https://www.linkedin.com/company/ecole-des-métiers-de-fribourg/about/"
                   target="_blank"
                   class="footer-link"
+                  >linkedin</a
                 >
-                  mahf.ch
-                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100048854336053"
+                  target="_blank"
+                  class="footer-link"
+                  >facebook</a
+                >
               </block></extends
             >
             <!-- @TODO - tout le contenu de l'event -->
@@ -496,50 +476,43 @@ tous en fête en 2026"
               src="event.html"
               locals='{"eventTitle":"Musée EMF", 
             "eventImg": "event-phanee.jpg", "eventValue": "musee",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
+            "eventDate": "février à avril 2026","eventPrice": "Entrée gratuite",  
             "eventPlace": "Chemin du Musée 2 Fribourg" }'
             >
-              <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Billeterie <span>Billeterie</span></a
-                ></block
-              >
+              <block name="cta"></block>
               <block name="description">
                 <p>
-                  L’exposition « la mission de l’artiste – Dialogues
-                  contemporains avec F.Hodler » sera présentée du 28 janvier au
-                  28 février 2026. Onze artistes contemporains y exposeront
-                  leurs œuvres, chacun explorant, à sa manière, l’héritage de
-                  Hodler et la notion de transmission dans l’art. À travers
-                  leurs créations, ces artistes interrogent la place de
-                  l’artiste dans la société d’aujourd'hui, tout en rendant
-                  hommage à l’impact durable du travail de Ferdinand Hodler.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                  quos ipsum ad officia nulla corporis fugiat qui, illo nesciunt
+                  rerum natus asperiores fugit rem perspiciatis, facere ipsa
+                  iusto, deleniti ea.
                 </p>
               </block>
               <block name="links">
                 <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
+                  href="https://www.youtube.com/channel/UCrSF12KiaS4Pa0Y6dogs1cQ"
                   target="_blank"
                   class="footer-link"
+                  >youtube</a
                 >
-                  facebook
-                </a>
                 <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
+                  href="https://www.instagram.com/emfribourg?igsh=M3ljc3VuZHJnNGxw"
                   target="_blank"
                   class="footer-link"
+                  >instagram</a
                 >
-                  instagram
-                </a>
                 <a
-                  href="https://www.fr.ch/mahf"
+                  href="https://www.linkedin.com/company/ecole-des-métiers-de-fribourg/about/"
                   target="_blank"
                   class="footer-link"
+                  >linkedin</a
                 >
-                  mahf.ch
-                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100048854336053"
+                  target="_blank"
+                  class="footer-link"
+                  >facebook</a
+                >
               </block></extends
             >
             <!-- @TODO - tout le contenu de l'event -->
@@ -547,50 +520,47 @@ tous en fête en 2026"
               src="event.html"
               locals='{"eventTitle":"Festival de musique", 
             "eventImg": "event-phanee.jpg", "eventValue": "phanee",
-            "eventDate": "28 janvier au 28 février 2026","eventPrice": "Entrée gratuite",  
+            "eventDate": "13 mai 2026","eventPrice": "XX CHF",  
             "eventPlace": "Chemin du Musée 2 Fribourg" }'
             >
               <block name="cta"
-                ><a
-                  href="https://fr.murtenlichtfestival.ch/tickets"
-                  class="btn outline event-cta"
-                  >Billeterie <span>Billeterie</span></a
+                ><a href="#" target="_blank" class="btn outline event-cta"
+                  >Billetterie <span>Billetterie</span></a
                 ></block
               >
               <block name="description">
                 <p>
-                  L’exposition « la mission de l’artiste – Dialogues
-                  contemporains avec F.Hodler » sera présentée du 28 janvier au
-                  28 février 2026. Onze artistes contemporains y exposeront
-                  leurs œuvres, chacun explorant, à sa manière, l’héritage de
-                  Hodler et la notion de transmission dans l’art. À travers
-                  leurs créations, ces artistes interrogent la place de
-                  l’artiste dans la société d’aujourd'hui, tout en rendant
-                  hommage à l’impact durable du travail de Ferdinand Hodler.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum, laborum voluptatum? Error debitis officia consequuntur
+                  excepturi animi sunt inventore numquam in soluta laudantium
+                  natus ex accusamus, quidem esse velit molestias.
                 </p>
               </block>
               <block name="links">
                 <a
-                  href="https://www.facebook.com/museedartetdhistoirefribourg/"
+                  href="https://www.youtube.com/channel/UCrSF12KiaS4Pa0Y6dogs1cQ"
                   target="_blank"
                   class="footer-link"
+                  >youtube</a
                 >
-                  facebook
-                </a>
                 <a
-                  href="https://www.instagram.com/museearthistoirefribourg/"
+                  href="https://www.instagram.com/emfribourg?igsh=M3ljc3VuZHJnNGxw"
                   target="_blank"
                   class="footer-link"
+                  >instagram</a
                 >
-                  instagram
-                </a>
                 <a
-                  href="https://www.fr.ch/mahf"
+                  href="https://www.linkedin.com/company/ecole-des-métiers-de-fribourg/about/"
                   target="_blank"
                   class="footer-link"
+                  >linkedin</a
                 >
-                  mahf.ch
-                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100048854336053"
+                  target="_blank"
+                  class="footer-link"
+                  >facebook</a
+                >
               </block></extends
             >
 
