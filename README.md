@@ -12,7 +12,7 @@
 Cloner le repository git
 
 ```
-git clone https://github.com/basile-kamm/emf-130.git
+git clone git@github.com:eikonlab/emf-130.git
 ```
 
 Se rendre dans le dossier du projet, puis installer les dépendances avec NPM
