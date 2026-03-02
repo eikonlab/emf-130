@@ -423,8 +423,11 @@ tous en fête en 2026"
                 <p>Prêt à tenter l'expérience ? On vous attend !</p>
               </block>
               <block name="links">
-                <a href="https://emf.ch" target="_blank" class="footer-link"
-                  >emf.ch</a
+                <a
+                  href="https://i-clock.emf.ch/"
+                  target="_blank"
+                  class="footer-link"
+                  >i-clock.emf.ch</a
                 >
               </block></extends
             >
@@ -452,7 +455,6 @@ tous en fête en 2026"
                 >
               </block></extends
             >
-            <!-- @TODO - Prix + billetterie -->
             <extends
               src="event.html"
               locals='{"eventTitle":"Festival de musique", 
@@ -491,7 +493,50 @@ tous en fête en 2026"
                 >
               </block></extends
             >
-
+            <extends
+              src="event.html"
+              locals='{"eventTitle":"Cycle de conférences publiques", 
+            "eventImg": "event-conference.jpg", "eventValue": "conferences",
+            "eventDate": "de mars à mai","eventPrice": "Entrée libre",  
+            "eventPlace": "Chemin du Musée 2 Fribourg" }'
+            >
+              <block name="description">
+                <p class="medium">
+                  Lundi 23 mars 2026 à 17h30 - Auditoire EMF - Section Industrie
+                </p>
+                <p>
+                  « De César à la cryptographie quantique en passant par Enigma
+                  » - M. Jean-Roland Schuler
+                </p>
+                <p class="small">Débats en français</p>
+                <br />
+                <p class="medium">
+                  Mardi 28 avril 2026 à 17h30 - Auditoire EMF - Section Maturité
+                  professionnelle – eCG - Sport
+                </p>
+                <p>
+                  « Le Temps, conférence interactive » - Dr François Gaille
+                  accompagné d’étudiants EMF
+                </p>
+                <p class="small">Débats en français</p>
+                <br />
+                <p class="medium">
+                  Lundi 4 mai 2026 à 17h30 - Auditoire EMF - Section
+                  Informatique
+                </p>
+                <p>
+                  « Discussion : le métier de l'informatique et l'introduction
+                  de l'IA » - PhD Béat Wolf, PhD Alessandro Silacci, PhD Bovet
+                  Gérôme
+                </p>
+                <p class="small">Débats en français, allemand, anglais</p>
+              </block>
+              <block name="links">
+                <a href="https://emf.ch" target="_blank" class="footer-link"
+                  >emf.ch</a
+                >
+              </block></extends
+            >
             <div class="background event"></div>
           </div>
           <div class="event-pdf-cont">
